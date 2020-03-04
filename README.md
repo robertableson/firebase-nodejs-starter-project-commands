@@ -66,7 +66,7 @@ To add caching with ExpressJS, simply add this line of code in an API request:
 
 `response.set('Cache-Control', 'public, max-age=300, s-maxage=600');`
 
-#### Parameters explained:
+__#### Parameters explained:__
 **Parameter 1 - Cache-Control:** Activates cache with header of response
 
 **Parameter 2 - Cache-Control values:** 
@@ -74,7 +74,7 @@ To add caching with ExpressJS, simply add this line of code in an API request:
 - **max-age=300:** How long we can store this content in the user's browser in seconds (300 seconds in this example). 
 - **s-maxage=600:** How long we can store this on the CDN in seconds (600 seconds in this example). 
 
-#### Example of usage:
+__#### Example of usage:__
 ```
 app.get('/timestamp', (request, response) => {
   response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
