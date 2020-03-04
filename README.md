@@ -52,3 +52,9 @@ exports.app = functions.https.onRequest(app);
   "function": "app"
 }]
 ```
+
+- Launch projet locally
+
+`firebase serve --only functions,hosting`
+
+- Go to http://localhost:5000/timestamp
