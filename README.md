@@ -5,6 +5,8 @@ Simple file listing the commands to quickly set up a Firebase starter project.
 ## Creating a new firebase project:
 `mkdir project-name`
 
+`cd project-name`
+
 `npm i -g firebase-tools`
 
 `firebase init hosting`
@@ -24,9 +26,9 @@ Simple file listing the commands to quickly set up a Firebase starter project.
   - "public" folder is the frontend
   - "firebase.json" is the firebase config file
 
-## Testing a get request:
+## Testing a GET request:
 - Go to functions/index.js
-- Replace with get request handler
+- Replace with GET request handler
 
 ```
 const functions = require('firebase-functions');
