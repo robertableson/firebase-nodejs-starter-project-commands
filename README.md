@@ -24,3 +24,29 @@ Simple file listing the commands to quickly set up a Firebase starter project.
   - "public" folder is the frontend
   - "firebase.json" is the firebase config file
 
+## Testing a get request:
+- Go to functions/index.js
+- Replace with get request handler
+
+```
+const functions = require('firebase-functions');
+const express = require('express');
+
+const app = express();
+
+app.get('/timestamp', (request, response) => {
+  response.send(`${Date.now()}`);
+});
+
+exports.app = functions.https.onRequest(app);
+```
+
+- Go to firebase.json file in root of project
+- Add a rewrite to handle URL requests (note the `exports.**app**` above matches the `"function": "**app**"`)
+
+```
+"rewrites": [{
+  "source": "/timestamp",
+  "function": "app"
+}]
+```
