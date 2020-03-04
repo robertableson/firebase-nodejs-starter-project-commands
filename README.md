@@ -44,7 +44,7 @@ exports.app = functions.https.onRequest(app);
 ```
 
 - Go to firebase.json file in root of project.
-- Add a rewrite to handle URL requests (**note:** the **app** export in the above code `exports.app`** has to match the **app** in the snippet below `"function": "app"`).
+- Add a rewrite to handle URL requests (**note:** the **app** export in the above code `exports.app` has to match the **app** in the snippet below `"function": "app"`).
 
 ```
 "rewrites": [{
